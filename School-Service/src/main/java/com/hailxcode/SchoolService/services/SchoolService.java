@@ -8,4 +8,5 @@ public interface SchoolService {
     public School addSchool(School school);
     public List<School> getAllSchools();
     public School getSchoolById(Integer id);
+    public School updateSchool(School school);
 }

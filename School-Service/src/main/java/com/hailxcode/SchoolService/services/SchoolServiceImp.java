@@ -34,4 +34,9 @@ public class SchoolServiceImp implements SchoolService{
         school.setStudents(studentClient.getStudentsOfSchool(school.getId()));
         return school;
     }
+
+    @Override
+    public School updateSchool(School school) {
+        return repository.save(school);
+    }
 }

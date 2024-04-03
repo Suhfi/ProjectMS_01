@@ -18,6 +18,10 @@ public class SchoolController {
     public School addSchool(@RequestBody School school){
        return schoolServiceImp.addSchool(school);
     }
+    @PutMapping
+    public School updateSchool(@RequestBody School school){
+       return schoolServiceImp.addSchool(school);
+    }
 
     @GetMapping
     public List<School> getAllSchools(){
