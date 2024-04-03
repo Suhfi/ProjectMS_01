@@ -1,0 +1,29 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+      routes:
+        - id: School-Service
+          uri: lb://School-Service
+          predicates:
+            - Path=/schools/**
+        - id: Student-Service
+          uri: lb://Student-Service
+          predicates:
+            - Path=/students/**

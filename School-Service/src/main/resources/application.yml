@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: School-Service
+
+  config:
+    import: "optional:configserver:http://localhost:8088"
+
